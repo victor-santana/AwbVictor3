@@ -11,9 +11,9 @@ namespace AwbRepository
         private static SqlConnection ConfigBanco()
         {
             var config = new ConfigurationBuilder()
-            .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location))
-            .AddJsonFile("C://Users//victor.santana//source//repos//AwbVictor3//AwbVictor3//appsettings.json").Build();
-            var stringConection = config.GetConnectionString("BancoDados");
+           .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location))
+           .AddJsonFile("C://Users//victor.santana//source//repos//AwbVictor3//AwbVictor3//appsettings.json").Build();
+            var stringConection = config.GetConnectionString("BancoDeDados");
             SqlConnection conexao = new SqlConnection(stringConection);            
 
             return conexao;
