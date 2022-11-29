@@ -1,10 +1,16 @@
 ﻿using Azure.Messaging.ServiceBus;
+using Newtonsoft.Json;
 
 namespace AwbServiceBusSubscribe
 {
     public class AwbServiceBusSunscribe
     {
-        
+        // cadeia de conexão para seu namespace do Barramento de Serviço
+        static string connectionString = "Endpoint=sb://isamnt.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=J0e+0fqrbTtnvnPtaCjAqYUpWkkwKWM4xA1dno38c50=";
+
+        // nome da sua fila do Barramento de Serviço
+        static string queueName = "testqueue";
+
         // o cliente que possui a conexão e pode ser usado para criar remetentes e destinatários
         static ServiceBusClient? client;
 
@@ -24,6 +30,7 @@ namespace AwbServiceBusSubscribe
             // completar a mensagem. mensagens é excluída da fila. 
             await args.CompleteMessageAsync(args.Message);
         }
+
 
         // lidar com quaisquer erros ao receber mensagens
         static Task ErrorHandler(ProcessErrorEventArgs args)
