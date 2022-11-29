@@ -15,4 +15,13 @@
     <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
   </ItemGroup>
 
+<<<<<<<<< Temporary merge branch 1
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+=========
+>>>>>>>>> Temporary merge branch 2
 </Project>
